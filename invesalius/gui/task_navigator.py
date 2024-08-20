@@ -582,6 +582,8 @@ class ImagePage(wx.Panel):
 
     def OnStartRegistration(self, evt, ctrl):
         value = ctrl.GetValue()
+        registration_active = value
+        self._EnableState(state, registration_active)
         if value:
             self.StartRegistration()
         else:
